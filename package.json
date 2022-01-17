@@ -1,0 +1,26 @@
+{
+  "name": "file-scanner",
+  "version": "1.0.0",
+  "description": "File scanner task with node.js",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maceina/file-scanner.git"
+  },
+  "keywords": [],
+  "author": "Audrius Maceina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maceina/file-scanner/issues"
+  },
+  "homepage": "https://github.com/Maceina/file-scanner#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "lodash": "^4.17.21",
+    "redux": "^4.1.2"
+  }
+}
