@@ -5,7 +5,7 @@ const store = require('../state/stateManager');
 const scan = async (req, res) => {
   const path = req.query.path;
   const currentStateFiles = store.getState().files;
-  if (!path) return res.status(400).send({ message: 'Invalid path' });
+  if (!path) return res.status(400).send({ message: 'Please provide path parameter where files are stored. For example: localhost:3000/scan?path=testFiles' });
 
   fs.readdir(path, async (err, files) => {
     if (err) {
@@ -14,7 +14,7 @@ const scan = async (req, res) => {
     }
     updateMissingFilesStatus(getMissingFiles(currentStateFiles, files));
     addNewFiles(files, currentStateFiles);
-    return res.status(200).send();
+    return res.status(200).send({message: `Files scanned from: ${path} directory.`});
   });
 };
 
